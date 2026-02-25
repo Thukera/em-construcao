@@ -24,3 +24,68 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Construction page animations */
+.caution-tape {
+  width: 200%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    #fbbf24 0px,
+    #fbbf24 40px,
+    #1f2937 40px,
+    #1f2937 80px
+  );
+  animation: scrollTape 3s linear infinite;
+}
+
+@keyframes scrollTape {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-113px);
+  }
+}
+
+.construction-sign-container {
+  animation: fadeInFloat 1.5s ease-out;
+}
+
+@keyframes fadeInFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.construction-sign {
+  position: relative;
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
